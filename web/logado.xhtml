@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//PT" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <head>
+        <link rel="stylesheet" href="./resources/css/animate.css" type="text/css" />
+    </head>
+    <body>
+
+        <ui:composition template="./Template.xhtml">
+
+            <ui:define name="top" >
+                <img src="resources/Logo DHRConsultoria.jpeg" width="200" height="180" alt="logoDM" class="animated flip"/>
+            </ui:define>
+
+            <ui:define name="left">
+                <h:form>
+                    <h:outputText value="#{emailControler.logarusuario}"/><br/>  
+                <h:commandButton value="Sair" action="#{emailControler.sair()}"/>
+                </h:form>
+                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            </ui:define>
+
+            <ui:define name="right">
+              <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+              <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            </ui:define>
+
+            <ui:define name="content">
+                <h:form id="inputfile" enctype="multipart/form-data">
+            <h:outputText value="E-mail(Para envio)"/>
+                <br/>
+                <h:inputText value="#{emailControler.beanuser}"/>
+            <br/>
+            <h:outputText value="Senha"/>
+                <br/>
+                <h:inputSecret value="#{emailControler.beansenha}"/>
+                <br/>
+                <h:outputText value="Assunto"/>
+                <br/>
+                <h:inputText value="#{emailControler.titulo}"/>
+                <br/>
+                <h:outputText value="Corpo do email"/>
+                <br/>
+                <p:editor value="#{emailControler.corpo}"/>
+                <br/>
+                <h:commandButton value="enviar" action="#{emailControler.enviar()}"/>
+        </h:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
