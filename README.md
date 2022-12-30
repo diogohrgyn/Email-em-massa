@@ -2,8 +2,8 @@
 Tecnologias:
 ## Java
 ##  Mave
-##  Html
- ## css
+##  Html 
+## css
 
 ### criação de uma aplicação de e-mail em massa simples.
 ##### uma aplicação simples que faz a leitura de um arquivo excel usando uma biblioteca chamada jxl.jar e uma biblioteca de Envio de emials.
