@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.AplicacaoEmail.logar;
+package br.com.aplicacaoemail.logar;
 
 import java.util.LinkedList;
 import java.util.List;
 
 /**
  *
- * @author Jccall00055
+ * @author Diogo Henrique Rodrigues
  */
 public class LoginBeanControler {
 
